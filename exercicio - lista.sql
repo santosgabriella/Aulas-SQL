@@ -29,8 +29,48 @@ VALUES ('maria', 'Veterinario','2000-08-06', 9.9),
     DELETE FROM estudantes
     WHERE id = 9; 
 
+    
+     USE universidade; 
+     SELECT * FROM estudantes; 
+
+     SELECT AVG(nota_final) AS medias_notas FROM estudantes; 
+
+     USE universidade; 
+     SELECT COUNT(*) total_curso FROM  estudantes;
+
     USE universidade; 
-    SELECT * FROM WHERE total_estudantes; 
+    SELECT * FROM estudantes WHERE idade; 
+
+    USE universidade; 
+    SELECT * FROM estudantes ORDER BY nome ASC;
+
+
+    USE universidade; 
+    SELECT MAX(nota_final) AS nota_maxima FROM estudantes; 
+
+    USE universidade; 
+    SELECT MIN(nota_final) AS nota_minima FROM estudantes; 
+
+    USE universidade; 
+    SELECT curso, nome FROM estudantes; 
+
+    USE universidade; 
+    SELECT curso, COUNT(*) AS total_estudantes
+    FROM estudantes
+    GROUP BY curso;
+
+    UPDATE `estudantes` 
+    SET `curso`='veterinario' 
+    WHERE = 2; 
+
+    SELECT `nota_final` FROM `estudantes` WHERE nota_final > 9.2;
+
+    DELETE FROM estudantes
+    WHERE curso = "veterinario"; 
+
+    DROP TABLE estudantes; 
+    DROP DATABASE universidade; 
+
 
 
 
